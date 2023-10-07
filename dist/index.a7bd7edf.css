@@ -2,12 +2,36 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   height: 100vh;
   display: flex;
 }
 
-body .container-1, body .container-2 {
+body .title {
+  color: #0000;
+  background: linear-gradient(45deg, #f54382, #7030a0, #34b0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+
+body main {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+@media (width <= 750px) {
+  body main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+}
+
+body main .container-1, body main .container-3, body main .container-2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +39,16 @@ body .container-1, body .container-2 {
   display: flex;
 }
 
-body .container-1 .box, body .container-2 .box {
+@media (width <= 750px) {
+  body main .container-1, body main .container-3, body main .container-2 {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+}
+
+body main .container-1 .box, body main .container-3 .box, body main .container-2 .box {
   color: #fff;
   border-radius: 5px;
   flex-direction: row;
@@ -26,77 +59,113 @@ body .container-1 .box, body .container-2 .box {
   display: flex;
 }
 
-body .container-1 .base-color, body .container-2 .base-color {
+body main .container-1 .base-color, body main .container-3 .base-color, body main .container-2 .base-color {
   background-color: #f54382;
   width: 80px;
 }
 
-body .container-1 .darken-1, body .container-2 .darken-1 {
+body main .container-1 .darken-1, body main .container-3 .darken-1, body main .container-2 .darken-1 {
   background-color: #d03262;
 }
 
-body .container-1 .darken-2, body .container-2 .darken-2 {
-  background-color: #b12042;
-}
-
-body .container-1 .darken-3, body .container-2 .darken-3 {
-  background-color: #8f0e22;
-}
-
-body .container-1 .darken-4, body .container-2 .darken-4 {
-  background-color: #6d0c1a;
-}
-
-body .container-1 .lighten-1, body .container-2 .lighten-1 {
+body main .container-1 .lighten-1, body main .container-3 .lighten-1, body main .container-2 .lighten-1 {
   background-color: #ff5daa;
 }
 
-body .container-1 .lighten-2, body .container-2 .lighten-2 {
+body main .container-1 .darken-2, body main .container-3 .darken-2, body main .container-2 .darken-2 {
+  background-color: #b12042;
+}
+
+body main .container-1 .lighten-2, body main .container-3 .lighten-2, body main .container-2 .lighten-2 {
   background-color: #ff7ebb;
 }
 
-body .container-1 .lighten-3, body .container-2 .lighten-3 {
+body main .container-1 .darken-3, body main .container-3 .darken-3, body main .container-2 .darken-3 {
+  background-color: #8f0e22;
+}
+
+body main .container-1 .lighten-3, body main .container-3 .lighten-3, body main .container-2 .lighten-3 {
   background-color: #ff9fcc;
 }
 
-body .container-1 .lighten-4, body .container-2 .lighten-4 {
+body main .container-1 .darken-4, body main .container-3 .darken-4, body main .container-2 .darken-4 {
+  background-color: #6d0c1a;
+}
+
+body main .container-1 .lighten-4, body main .container-3 .lighten-4, body main .container-2 .lighten-4 {
   background-color: #ffc1dd;
 }
 
-body .container-2 .base-color {
+body main .container-2 .base-color {
   background-color: #7030a0;
 }
 
-body .container-2 .darken-1 {
+body main .container-2 .darken-1 {
   background-color: #511d7a;
 }
 
-body .container-2 .darken-2 {
-  background-color: #3b0f5c;
-}
-
-body .container-2 .darken-3 {
-  background-color: #2a0a44;
-}
-
-body .container-2 .darken-4 {
-  background-color: #1d0631;
-}
-
-body .container-2 .lighten-1 {
+body main .container-2 .lighten-1 {
   background-color: #8e56c7;
 }
 
-body .container-2 .lighten-2 {
+body main .container-2 .darken-2 {
+  background-color: #3b0f5c;
+}
+
+body main .container-2 .lighten-2 {
   background-color: #a075d9;
 }
 
-body .container-2 .lighten-3 {
+body main .container-2 .darken-3 {
+  background-color: #2a0a44;
+}
+
+body main .container-2 .lighten-3 {
   background-color: #b69eeb;
 }
 
-body .container-2 .lighten-4 {
+body main .container-2 .darken-4 {
+  background-color: #1d0631;
+}
+
+body main .container-2 .lighten-4 {
   background-color: #c8b8f8;
+}
+
+body main .container-3 .base-color {
+  background-color: #34b0f0;
+}
+
+body main .container-3 .darken-1 {
+  background-color: #2085c5;
+}
+
+body main .container-3 .lighten-1 {
+  background-color: #5dc4ff;
+}
+
+body main .container-3 .darken-2 {
+  background-color: #176eac;
+}
+
+body main .container-3 .lighten-2 {
+  background-color: #7ad0ff;
+}
+
+body main .container-3 .darken-3 {
+  background-color: #0f598f;
+}
+
+body main .container-3 .lighten-3 {
+  background-color: #9df;
+}
+
+body main .container-3 .darken-4 {
+  background-color: #0a476e;
+}
+
+body main .container-3 .lighten-4 {
+  background-color: #b5e8ff;
 }
 
 /*# sourceMappingURL=index.a7bd7edf.css.map */

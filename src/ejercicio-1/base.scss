@@ -5,20 +5,38 @@
     align-items: $align;
 }
 
-$pink-1: #D03262;
-$pink-2: #B12042;
-$pink-3: #8F0E22;
-$pink-4: #6D0C1A;
-$pink-5: #FF5DAA;
-$pink-6: #FF7EBB;
-$pink-7: #FF9FCC;
-$pink-8: #FFC1DD;
+$theme-pink: (
+    base: #f54382,
+    darken-1: #D03262,
+    darken-2: #B12042,
+    darken-3: #8F0E22,
+    darken-4: #6D0C1A,
+    lighten-1: #FF5DAA,
+    lighten-2: #FF7EBB,
+    lighten-3: #FF9FCC,
+    lighten-4: #FFC1DD
+);
 
-$purple-1: #511D7A;
-$purple-2: #3B0F5C;
-$purple-3: #2A0A44;
-$purple-4: #1D0631;
-$purple-5: #8E56C7;
-$purple-6: #A075D9;
-$purple-7: #B69EEB;
-$purple-8: #C8B8F8;
+$theme-purple: (
+    base: #7030A0,
+    darken-1: #511D7A,
+    darken-2: #3B0F5C,
+    darken-3: #2A0A44,
+    darken-4: #1D0631,
+    lighten-1: #8E56C7,
+    lighten-2: #A075D9,
+    lighten-3: #B69EEB,
+    lighten-4: #C8B8F8
+);
+
+$theme-blue: (
+    base: #34B0F0,
+    darken-1: #2085C5,
+    darken-2: #176EAC,
+    darken-3: #0F598F,
+    darken-4: #0A476E,
+    lighten-1: #5DC4FF,
+    lighten-2: #7AD0FF,
+    lighten-3: #99DDFF,
+    lighten-4: #B5E8FF
+);
