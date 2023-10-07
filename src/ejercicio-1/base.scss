@@ -1,0 +1,24 @@
+@mixin flexCenter ($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+$pink-1: #D03262;
+$pink-2: #B12042;
+$pink-3: #8F0E22;
+$pink-4: #6D0C1A;
+$pink-5: #FF5DAA;
+$pink-6: #FF7EBB;
+$pink-7: #FF9FCC;
+$pink-8: #FFC1DD;
+
+$purple-1: #511D7A;
+$purple-2: #3B0F5C;
+$purple-3: #2A0A44;
+$purple-4: #1D0631;
+$purple-5: #8E56C7;
+$purple-6: #A075D9;
+$purple-7: #B69EEB;
+$purple-8: #C8B8F8;

@@ -1,0 +1,102 @@
+body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 100vh;
+  display: flex;
+}
+
+body .container-1, body .container-2 {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+body .container-1 .box, body .container-2 .box {
+  color: #fff;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 73px;
+  height: 73px;
+  display: flex;
+}
+
+body .container-1 .base-color, body .container-2 .base-color {
+  background-color: #f54382;
+  width: 80px;
+}
+
+body .container-1 .darken-1, body .container-2 .darken-1 {
+  background-color: #d03262;
+}
+
+body .container-1 .darken-2, body .container-2 .darken-2 {
+  background-color: #b12042;
+}
+
+body .container-1 .darken-3, body .container-2 .darken-3 {
+  background-color: #8f0e22;
+}
+
+body .container-1 .darken-4, body .container-2 .darken-4 {
+  background-color: #6d0c1a;
+}
+
+body .container-1 .lighten-1, body .container-2 .lighten-1 {
+  background-color: #ff5daa;
+}
+
+body .container-1 .lighten-2, body .container-2 .lighten-2 {
+  background-color: #ff7ebb;
+}
+
+body .container-1 .lighten-3, body .container-2 .lighten-3 {
+  background-color: #ff9fcc;
+}
+
+body .container-1 .lighten-4, body .container-2 .lighten-4 {
+  background-color: #ffc1dd;
+}
+
+body .container-2 .base-color {
+  background-color: #7030a0;
+}
+
+body .container-2 .darken-1 {
+  background-color: #511d7a;
+}
+
+body .container-2 .darken-2 {
+  background-color: #3b0f5c;
+}
+
+body .container-2 .darken-3 {
+  background-color: #2a0a44;
+}
+
+body .container-2 .darken-4 {
+  background-color: #1d0631;
+}
+
+body .container-2 .lighten-1 {
+  background-color: #8e56c7;
+}
+
+body .container-2 .lighten-2 {
+  background-color: #a075d9;
+}
+
+body .container-2 .lighten-3 {
+  background-color: #b69eeb;
+}
+
+body .container-2 .lighten-4 {
+  background-color: #c8b8f8;
+}
+
+/*# sourceMappingURL=index.a7bd7edf.css.map */

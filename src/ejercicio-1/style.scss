@@ -1,0 +1,98 @@
+@use 'base' as *;
+
+body {
+    height: 100vh;
+    @include flexCenter(column, center, center);
+    gap: 8px;
+
+    .container-1 {
+        @include flexCenter(row, space-between, center);
+        gap: 8px;
+
+        .box {
+            @include flexCenter(row, center, center);
+            width: 73px;
+            height: 73px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .base-color {
+            background-color: #f54382;
+            width: 80px;
+        }
+
+        .darken-1 {
+            background-color: $pink-1;
+        }
+
+        .darken-2 {
+            background-color: $pink-2;
+        }
+
+        .darken-3 {
+            background-color: $pink-3;
+        }
+
+        .darken-4 {
+            background-color: $pink-4;
+        }
+
+        .lighten-1 {
+            background-color: $pink-5;
+        }
+
+        .lighten-2 {
+            background-color: $pink-6;
+        }
+
+        .lighten-3 {
+            background-color: $pink-7;
+        }
+
+        .lighten-4 {
+            background-color: $pink-8;
+        }
+    }
+
+    .container-2 {
+        @extend .container-1;
+
+        .base-color {
+            background-color: #7030A0;
+            @extend .base-color;
+        }
+
+        .darken-1 {
+            background-color: $purple-1;
+        }
+
+        .darken-2 {
+            background-color: $purple-2;
+        }
+
+        .darken-3 {
+            background-color: $purple-3;
+        }
+
+        .darken-4 {
+            background-color: $purple-4;
+        }
+
+        .lighten-1 {
+            background-color: $purple-5;
+        }
+
+        .lighten-2 {
+            background-color: $purple-6;
+        }
+
+        .lighten-3 {
+            background-color: $purple-7;
+        }
+
+        .lighten-4 {
+            background-color: $purple-8;
+        }
+    }
+}
