@@ -1,0 +1,49 @@
+.content {
+  font-family: Helvetica, sans-serif;
+}
+
+.content .box {
+  text-align: center;
+  border: 1px solid #000000b3;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  display: flex;
+}
+
+.content .base {
+  background-color: #e8326a;
+}
+
+.content .important {
+  background-color: #63253e;
+}
+
+.content .warning {
+  background-color: #eec31b;
+}
+
+.content .box-shadow {
+  box-shadow: 10px 10px 15px #000000b3;
+}
+
+body {
+  height: 100vh;
+}
+
+body .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+body .container .content {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.99baddb2.css.map */

@@ -1,0 +1,16 @@
+@use 'base' as *;
+//@use 'temaA' as *;
+@use 'temaB' as *;
+
+body {
+    height: 100vh;
+
+    .container {
+        @include flexCenter(column, center, center);
+        height: 100%;
+
+        .content {
+            font-size: 12px;
+        }
+    }
+}

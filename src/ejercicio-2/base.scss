@@ -1,0 +1,21 @@
+@mixin flexCenter ($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+$border: 1px solid rgba(0, 0, 0, 0.7);
+
+$baseA: #AC46BB;
+$importantA: #2F7D31;
+$warningA: #7FD4FA;
+$fontA: 'Times New Roman', serif;
+$box-shadowA: -10px 10px 15px rgba(0, 0, 0, 0.7);
+
+$baseB: #E8326A;
+$importantB: #63253E;
+$warningB: #EEC31B;
+$fontB: 'Helvetica', sans-serif;
+$box-shadowB: 10px 10px 15px rgba(0, 0, 0, 0.7);
+$borderR: 5px;

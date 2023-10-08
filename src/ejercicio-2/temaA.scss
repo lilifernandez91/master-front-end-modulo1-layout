@@ -1,0 +1,29 @@
+@use 'base' as *;
+
+.content {
+    font-family: $fontA;
+
+    .box {
+        @include flexCenter(column, center, center);
+        text-align: center;
+        width: 80px;
+        height: 50px;
+        border: $border;
+    }
+
+    .base {
+        background-color: $baseA;
+    }
+
+    .important {
+        background-color: $importantA;
+    }
+
+    .warning {
+        background-color: $warningA;
+    }
+
+    .box-shadow {
+        box-shadow: $box-shadowA;
+    }
+}
