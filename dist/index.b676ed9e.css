@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 0 5px;
+}
+
+.container h1 {
+  font-size: 16px;
+}
+
+.container .container-main {
+  background-color: #176b87;
+}
+
+.container .container-main .nav .list-nav {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  display: flex;
+}
+
+@media screen and (width <= 640px) {
+  .container .container-main .nav .list-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.container .container-main .nav .list-nav .list {
+  color: #fff;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding: 8px 0;
+  list-style: none;
+  transition: background-color .3s;
+  display: flex;
+}
+
+@media screen and (width <= 640px) {
+  .container .container-main .nav .list-nav .list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+}
+
+.container .container-main .nav .list-nav .list:hover {
+  background-color: #085670;
+}
+
+/*# sourceMappingURL=index.b676ed9e.css.map */

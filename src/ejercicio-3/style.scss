@@ -1,0 +1,48 @@
+@use 'base' as *;
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 5px;
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .container-main {
+        background-color: $primary-color;
+
+        .nav {
+            .list-nav {
+                @include flexCenter(row, space-between, center);
+                padding-left: 0;
+
+                @media screen and (max-width: 640px) {
+                    @include flexCenter(column, center, center);
+                }
+
+                .list {
+                    width: 25%;
+                    @include flexCenter(row, center, center);
+                    list-style: none;
+                    color: $white-color;
+                    padding: 8px 0;
+                    transition: background-color 0.3s;
+
+                    @media screen and (max-width: 640px) {
+                        @include flexCenter(column, center, center);
+                        width: 100%;
+                    }
+                }
+
+                .list:hover {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
