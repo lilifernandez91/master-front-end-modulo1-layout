@@ -1,12 +1,23 @@
 body {
+  height: 100vh;
+  margin: 0;
+}
+
+body .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 1rem;
   display: flex;
 }
 
-body .title {
+@media (width >= 768px) {
+  body .container {
+    height: 100%;
+  }
+}
+
+body .container .title {
   color: #0000;
   background: linear-gradient(45deg, #f54382, #7030a0, #34b0f0);
   -webkit-background-clip: text;
@@ -14,16 +25,16 @@ body .title {
   display: inline-block;
 }
 
-body main {
+body .container main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
   display: flex;
 }
 
 @media (width <= 750px) {
-  body main {
+  body .container main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -31,16 +42,16 @@ body main {
   }
 }
 
-body main .container-1, body main .container-3, body main .container-2 {
+body .container main .container-1, body .container main .container-3, body .container main .container-2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
   display: flex;
 }
 
 @media (width <= 750px) {
-  body main .container-1, body main .container-3, body main .container-2 {
+  body .container main .container-1, body .container main .container-3, body .container main .container-2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -48,123 +59,122 @@ body main .container-1, body main .container-3, body main .container-2 {
   }
 }
 
-body main .container-1 .box, body main .container-3 .box, body main .container-2 .box {
+body .container main .container-1 .box, body .container main .container-3 .box, body .container main .container-2 .box {
   color: #fff;
   border-radius: 5px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 73px;
-  height: 73px;
+  width: 5rem;
+  height: 6rem;
   display: flex;
 }
 
-body main .container-1 .base-color, body main .container-3 .base-color, body main .container-2 .base-color {
+body .container main .container-1 .base-color, body .container main .container-3 .base-color, body .container main .container-2 .base-color {
   background-color: #f54382;
-  width: 80px;
 }
 
-body main .container-1 .darken-1, body main .container-3 .darken-1, body main .container-2 .darken-1 {
+body .container main .container-1 .darken-1, body .container main .container-3 .darken-1, body .container main .container-2 .darken-1 {
   background-color: #d03262;
 }
 
-body main .container-1 .lighten-1, body main .container-3 .lighten-1, body main .container-2 .lighten-1 {
+body .container main .container-1 .lighten-1, body .container main .container-3 .lighten-1, body .container main .container-2 .lighten-1 {
   background-color: #ff5daa;
 }
 
-body main .container-1 .darken-2, body main .container-3 .darken-2, body main .container-2 .darken-2 {
+body .container main .container-1 .darken-2, body .container main .container-3 .darken-2, body .container main .container-2 .darken-2 {
   background-color: #b12042;
 }
 
-body main .container-1 .lighten-2, body main .container-3 .lighten-2, body main .container-2 .lighten-2 {
+body .container main .container-1 .lighten-2, body .container main .container-3 .lighten-2, body .container main .container-2 .lighten-2 {
   background-color: #ff7ebb;
 }
 
-body main .container-1 .darken-3, body main .container-3 .darken-3, body main .container-2 .darken-3 {
+body .container main .container-1 .darken-3, body .container main .container-3 .darken-3, body .container main .container-2 .darken-3 {
   background-color: #8f0e22;
 }
 
-body main .container-1 .lighten-3, body main .container-3 .lighten-3, body main .container-2 .lighten-3 {
+body .container main .container-1 .lighten-3, body .container main .container-3 .lighten-3, body .container main .container-2 .lighten-3 {
   background-color: #ff9fcc;
 }
 
-body main .container-1 .darken-4, body main .container-3 .darken-4, body main .container-2 .darken-4 {
+body .container main .container-1 .darken-4, body .container main .container-3 .darken-4, body .container main .container-2 .darken-4 {
   background-color: #6d0c1a;
 }
 
-body main .container-1 .lighten-4, body main .container-3 .lighten-4, body main .container-2 .lighten-4 {
+body .container main .container-1 .lighten-4, body .container main .container-3 .lighten-4, body .container main .container-2 .lighten-4 {
   background-color: #ffc1dd;
 }
 
-body main .container-2 .base-color {
+body .container main .container-2 .base-color {
   background-color: #7030a0;
 }
 
-body main .container-2 .darken-1 {
+body .container main .container-2 .darken-1 {
   background-color: #511d7a;
 }
 
-body main .container-2 .lighten-1 {
+body .container main .container-2 .lighten-1 {
   background-color: #8e56c7;
 }
 
-body main .container-2 .darken-2 {
+body .container main .container-2 .darken-2 {
   background-color: #3b0f5c;
 }
 
-body main .container-2 .lighten-2 {
+body .container main .container-2 .lighten-2 {
   background-color: #a075d9;
 }
 
-body main .container-2 .darken-3 {
+body .container main .container-2 .darken-3 {
   background-color: #2a0a44;
 }
 
-body main .container-2 .lighten-3 {
+body .container main .container-2 .lighten-3 {
   background-color: #b69eeb;
 }
 
-body main .container-2 .darken-4 {
+body .container main .container-2 .darken-4 {
   background-color: #1d0631;
 }
 
-body main .container-2 .lighten-4 {
+body .container main .container-2 .lighten-4 {
   background-color: #c8b8f8;
 }
 
-body main .container-3 .base-color {
+body .container main .container-3 .base-color {
   background-color: #34b0f0;
 }
 
-body main .container-3 .darken-1 {
+body .container main .container-3 .darken-1 {
   background-color: #2085c5;
 }
 
-body main .container-3 .lighten-1 {
+body .container main .container-3 .lighten-1 {
   background-color: #5dc4ff;
 }
 
-body main .container-3 .darken-2 {
+body .container main .container-3 .darken-2 {
   background-color: #176eac;
 }
 
-body main .container-3 .lighten-2 {
+body .container main .container-3 .lighten-2 {
   background-color: #7ad0ff;
 }
 
-body main .container-3 .darken-3 {
+body .container main .container-3 .darken-3 {
   background-color: #0f598f;
 }
 
-body main .container-3 .lighten-3 {
+body .container main .container-3 .lighten-3 {
   background-color: #9df;
 }
 
-body main .container-3 .darken-4 {
+body .container main .container-3 .darken-4 {
   background-color: #0a476e;
 }
 
-body main .container-3 .lighten-4 {
+body .container main .container-3 .lighten-4 {
   background-color: #b5e8ff;
 }
 

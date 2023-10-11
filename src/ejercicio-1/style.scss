@@ -2,89 +2,97 @@
 
 body {
     height: 100vh;
-    @include flexCenter(column, center, center);
+    margin: 0;
 
-    .title {
-        background: linear-gradient(45deg, #f54382, #7030A0, #34B0F0);
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
+    .container {
+        @include flexCenter(column, center, center);
+        gap: 1rem;
 
-    main {
-        @include flexCenter(column, space-between, center);
-        gap: 8px;
-
-        @media (max-width: 750px) {
-            @include flexCenter(row, space-between, center);
+        @media (min-width: 768px) {
+            height: 100%;
         }
 
-        .container-1 {
-            @include flexCenter(row, space-between, center);
-            gap: 8px;
+        .title {
+            background: linear-gradient(45deg, #f54382, #7030A0, #34B0F0);
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        main {
+            @include flexCenter(column, space-between, center);
+            gap: 1rem;
 
             @media (max-width: 750px) {
-                @include flexCenter(column, space-between, center);
+                @include flexCenter(row, space-between, center);
             }
 
-            .box {
-                @include flexCenter(row, center, center);
-                width: 73px;
-                height: 73px;
-                border-radius: 5px;
-                color: white;
-            }
+            .container-1 {
+                @include flexCenter(row, space-between, center);
+                gap: 1rem;
 
-            .base-color {
-                background-color: #f54382;
-                width: 80px;
-            }
-
-            @for $i from 1 through 4 {
-                .darken-#{$i} {
-                    background-color: map-get($theme-pink, darken-#{$i});
+                @media (max-width: 750px) {
+                    @include flexCenter(column, space-between, center);
                 }
 
-                .lighten-#{$i} {
-                    background-color: map-get($theme-pink, lighten-#{$i});
-                }
-            }
-        }
-
-        .container-2 {
-            @extend .container-1;
-
-            .base-color {
-                background-color: #7030A0;
-                @extend .base-color;
-            }
-
-            @for $i from 1 through 4 {
-                .darken-#{$i} {
-                    background-color: map-get($theme-purple, darken-#{$i});
+                .box {
+                    @include flexCenter(row, center, center);
+                    width: 5rem;
+                    height: 6rem;
+                    border-radius: 5px;
+                    color: white;
                 }
 
-                .lighten-#{$i} {
-                    background-color: map-get($theme-purple, lighten-#{$i});
-                }
-            }
-        }
-
-        .container-3 {
-            @extend .container-1;
-
-            .base-color {
-                background-color: #34B0F0;
-                @extend .base-color;
-            }
-
-            @for $i from 1 through 4 {
-                .darken-#{$i} {
-                    background-color: map-get($theme-blue, darken-#{$i});
+                .base-color {
+                    background-color: #f54382;
                 }
 
-                .lighten-#{$i} {
-                    background-color: map-get($theme-blue, lighten-#{$i});
+                @for $i from 1 through 4 {
+                    .darken-#{$i} {
+                        background-color: map-get($theme-pink, darken-#{$i});
+                    }
+
+                    .lighten-#{$i} {
+                        background-color: map-get($theme-pink, lighten-#{$i});
+                    }
+                }
+            }
+
+            .container-2 {
+                @extend .container-1;
+
+                .base-color {
+                    background-color: #7030A0;
+                    @extend .base-color;
+                }
+
+                @for $i from 1 through 4 {
+                    .darken-#{$i} {
+                        background-color: map-get($theme-purple, darken-#{$i});
+                    }
+
+                    .lighten-#{$i} {
+                        background-color: map-get($theme-purple, lighten-#{$i});
+                    }
+                }
+            }
+
+            .container-3 {
+                @extend .container-1;
+
+                .base-color {
+                    background-color: #34B0F0;
+                    @extend .base-color;
+                }
+
+                @for $i from 1 through 4 {
+                    .darken-#{$i} {
+                        background-color: map-get($theme-blue, darken-#{$i});
+                    }
+
+                    .lighten-#{$i} {
+                        background-color: map-get($theme-blue, lighten-#{$i});
+                    }
                 }
             }
         }

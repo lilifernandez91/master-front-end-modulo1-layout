@@ -1,16 +1,17 @@
 @use 'base' as *;
-//@use 'temaA' as *;
-@use 'temaB' as *;
+@use 'temaA' as *;
+//@use 'temaB' as *;
 
 body {
     height: 100vh;
+    margin: 0;
 
     .container {
         @include flexCenter(column, center, center);
         height: 100%;
 
         .content {
-            font-size: 12px;
+            font-size: 0.75rem;
         }
     }
 }

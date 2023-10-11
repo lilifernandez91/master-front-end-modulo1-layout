@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/lilifernandez91/master-front-end-modulo1-layout#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "2.9.3"
+    "@parcel/transformer-sass": "2.10.0"
   }
 }

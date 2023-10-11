@@ -1,15 +1,11 @@
 @use 'base' as *;
+@use 'temaA' as *;
 
 .content {
     font-family: $fontB;
 
     .box {
-        @include flexCenter(column, center, center);
-        text-align: center;
-        width: 80px;
-        height: 50px;
-        border: $border;
-        border-radius: $borderR;
+        @extend .box
     }
 
     .base {
