@@ -1,6 +1,6 @@
 @use 'base' as *;
-@use 'temaA' as *;
-//@use 'temaB' as *;
+@use 'temaA' as theme;
+//@use 'temaB' as theme;
 
 body {
     height: 100vh;
@@ -11,7 +11,33 @@ body {
         height: 100%;
 
         .content {
+            font-family: theme.$font;
             font-size: 0.75rem;
+
+            .box {
+                @include flexCenter(column, center, center);
+                text-align: center;
+                width: 5rem;
+                height: 3.50rem;
+                border: theme.$border;
+                border-radius: theme.$borderR;
+            }
+
+            .base {
+                background-color: theme.$base;
+            }
+
+            .important {
+                background-color: theme.$important;
+            }
+
+            .warning {
+                background-color: theme.$warning;
+            }
+
+            .box-shadow {
+                box-shadow: theme.$box-shadow;
+            }
         }
     }
 }

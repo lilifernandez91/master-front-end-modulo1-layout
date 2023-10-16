@@ -3,97 +3,50 @@
 body {
     height: 100vh;
     margin: 0;
+}
 
-    .container {
-        @include flexCenter(column, center, center);
+.container {
+    @include flexCenter(column, center, center);
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+        height: 100%;
+    }
+
+    .title {
+        background: linear-gradient(45deg,
+                $color-base1,
+                $color-base2,
+                $color-base3);
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    main {
+        @include flexCenter(column, space-between, center);
         gap: 1rem;
 
-        @media (min-width: 768px) {
-            height: 100%;
+        @media (max-width: 750px) {
+            @include flexCenter(row, space-between, center);
         }
 
-        .title {
-            background: linear-gradient(45deg, #f54382, #7030A0, #34B0F0);
-            background-clip: text;
-            color: transparent;
-            display: inline-block;
-        }
-
-        main {
-            @include flexCenter(column, space-between, center);
+        .container-1,
+        .container-2,
+        .container-3 {
+            @include flexCenter(row, space-between, center);
             gap: 1rem;
 
             @media (max-width: 750px) {
-                @include flexCenter(row, space-between, center);
+                @include flexCenter(column, space-between, center);
             }
 
-            .container-1 {
-                @include flexCenter(row, space-between, center);
-                gap: 1rem;
-
-                @media (max-width: 750px) {
-                    @include flexCenter(column, space-between, center);
-                }
-
-                .box {
-                    @include flexCenter(row, center, center);
-                    width: 5rem;
-                    height: 6rem;
-                    border-radius: 5px;
-                    color: white;
-                }
-
-                .base-color {
-                    background-color: #f54382;
-                }
-
-                @for $i from 1 through 4 {
-                    .darken-#{$i} {
-                        background-color: map-get($theme-pink, darken-#{$i});
-                    }
-
-                    .lighten-#{$i} {
-                        background-color: map-get($theme-pink, lighten-#{$i});
-                    }
-                }
-            }
-
-            .container-2 {
-                @extend .container-1;
-
-                .base-color {
-                    background-color: #7030A0;
-                    @extend .base-color;
-                }
-
-                @for $i from 1 through 4 {
-                    .darken-#{$i} {
-                        background-color: map-get($theme-purple, darken-#{$i});
-                    }
-
-                    .lighten-#{$i} {
-                        background-color: map-get($theme-purple, lighten-#{$i});
-                    }
-                }
-            }
-
-            .container-3 {
-                @extend .container-1;
-
-                .base-color {
-                    background-color: #34B0F0;
-                    @extend .base-color;
-                }
-
-                @for $i from 1 through 4 {
-                    .darken-#{$i} {
-                        background-color: map-get($theme-blue, darken-#{$i});
-                    }
-
-                    .lighten-#{$i} {
-                        background-color: map-get($theme-blue, lighten-#{$i});
-                    }
-                }
+            .box {
+                @include flexCenter(row, center, center);
+                width: 5rem;
+                height: 6rem;
+                border-radius: 5px;
+                color: white;
             }
         }
     }

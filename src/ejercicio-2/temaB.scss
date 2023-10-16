@@ -1,26 +1,7 @@
-@use 'base' as *;
-@use 'temaA' as *;
-
-.content {
-    font-family: $fontB;
-
-    .box {
-        @extend .box
-    }
-
-    .base {
-        background-color: $baseB;
-    }
-
-    .important {
-        background-color: $importantB;
-    }
-
-    .warning {
-        background-color: $warningB;
-    }
-
-    .box-shadow {
-        box-shadow: $box-shadowB;
-    }
-}
+$base: #E8326A;
+$important: #63253E;
+$warning: #EEC31B;
+$font: 'Helvetica', sans-serif;
+$box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+$border: '';
+$borderR: 5px;

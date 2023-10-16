@@ -5,38 +5,26 @@
     align-items: $align;
 }
 
-$theme-pink: (
-    base: #f54382,
-    darken-1: #D03262,
-    darken-2: #B12042,
-    darken-3: #8F0E22,
-    darken-4: #6D0C1A,
-    lighten-1: #FF5DAA,
-    lighten-2: #FF7EBB,
-    lighten-3: #FF9FCC,
-    lighten-4: #FFC1DD
-);
+$color-base1: #95425f;
+$color-base2: #7030A0;
+$color-base3: #1e5c7a;
 
-$theme-purple: (
-    base: #7030A0,
-    darken-1: #511D7A,
-    darken-2: #3B0F5C,
-    darken-3: #2A0A44,
-    darken-4: #1D0631,
-    lighten-1: #8E56C7,
-    lighten-2: #A075D9,
-    lighten-3: #B69EEB,
-    lighten-4: #C8B8F8
-);
+$colors: $color-base1, $color-base2, $color-base3;
 
-$theme-blue: (
-    base: #34B0F0,
-    darken-1: #2085C5,
-    darken-2: #176EAC,
-    darken-3: #0F598F,
-    darken-4: #0A476E,
-    lighten-1: #5DC4FF,
-    lighten-2: #7AD0FF,
-    lighten-3: #99DDFF,
-    lighten-4: #B5E8FF
-);
+@for $k from 1 through length($colors) {
+    $color: nth($colors, $k);
+
+    @for $i from 1 through 4 {
+        .color-base#{$k} {
+            background-color: $color;
+        }
+
+        .darken-#{$i}-color-base#{$k} {
+            background-color: darken($color, $i * 10%);
+        }
+
+        .lighten-#{$i}-color-base#{$k} {
+            background-color: lighten($color, $i * 10%);
+        }
+    }
+}
