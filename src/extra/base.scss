@@ -1,0 +1,13 @@
+@mixin flexCenter ($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+$color-header: #46B18C;
+$color-text: #FAFAF0;
+$color-black: #000000;
+$color-footer: #CBFBE7;
+$color-nav: #007C5A;
+$color-gray: #E8E8E8;
