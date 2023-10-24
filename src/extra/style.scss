@@ -4,7 +4,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: $color-gray;
+    background-color: $color-text;
+    font-size: 1rem;
 }
 
 header {
@@ -13,12 +14,18 @@ header {
 
         @media (min-width: 768px) {
             display: block;
-
             @include flexCenter(row, space-between, center);
-            padding: 8px;
+            padding: 0.5rem;
+
+            .input {
+                border: 2px solid $color-nav;
+                height: 20px;
+                border-radius: 4px;
+            }
 
             .toolbar-name {
-                font-size: 14px;
+                font-size: 0.8rem;
+                font-weight: 600;
             }
         }
     }
@@ -26,14 +33,13 @@ header {
     .page-title {
         background-color: $color-header;
         color: $color-text;
-        padding: 12px;
+        padding: 0.75rem;
     }
 }
 
 .page-container {
     @media (min-width: 768px) {
-        @include flexCenter(row, flex-start, flex-start);
-        gap: 60px;
+        display: flex;
     }
 
     nav {
@@ -44,7 +50,6 @@ header {
             @media (min-width: 768px) {
                 height: 100vh;
                 background-color: $color-nav;
-                width: 140px;
             }
 
             .menu-title {
@@ -52,7 +57,7 @@ header {
 
                 @media (min-width: 768px) {
                     display: block;
-                    padding: 8px;
+                    padding: 0.5rem;
                     color: $color-text;
                     font-weight: 600;
                 }
@@ -60,26 +65,45 @@ header {
 
             .container-list {
                 @include flexCenter(row, space-between, center);
-                padding: 8px;
+                padding: 0.5rem;
                 margin: 0;
                 background-color: $color-nav;
 
                 @media (min-width: 768px) {
                     @include flexCenter(column, center, flex-start);
                     background-color: $color-footer;
+                    padding: 0;
+                    padding-left: 0;
                 }
 
                 .list {
                     list-style: none;
-                    padding: 8px;
+                    padding: 0.5rem;
                     background-color: $color-footer;
-                    width: 60px;
+                    width: 4rem;
                     text-align: center;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
 
                     @media (max-width: 280px) {
-                        width: 40px;
-                        font-size: 10px;
+                        width: 2.5rem;
+                        font-size: 0.6rem;
                     }
+
+                    @media (min-width: 768px) {
+                        width: 100%;
+                        padding: 8px 0;
+                        text-align: left;
+
+                        &::before {
+                            content: "";
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+
+                .list:hover {
+                    transform: scale(1.1);
                 }
 
                 .list-style {
@@ -92,46 +116,62 @@ header {
     }
 
     main {
+        width: 100%;
+
         .list {
             @include flexCenter(column, center, flex-start);
-            gap: 8px;
-            margin: 16px;
+            gap: 0.5rem;
+            margin: 1rem;
 
             @media (min-width: 768px) {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
             }
         }
 
         .card {
             @include flexCenter(row, flex-start, center);
-            gap: 16px;
+            gap: 1rem;
             width: 100%;
-            height: 120px;
+            height: 7.5rem;
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease;
 
             @media (min-width: 768px) {
                 @include flexCenter(column, center, center);
-                height: 116px;
+                height: 7rem;
+                width: 10rem;
                 padding: 16px;
+                border: 1px solid $color-black;
             }
 
             img {
                 border-radius: 50%;
-                margin-left: 20px;
+                margin-left: 1.25rem;
+
+                @media (min-width: 768px) {
+                    margin-left: 0;
+                }
             }
 
             .member-name {
                 @media (min-width: 768px) {
-                    font-size: 12px;
+                    font-size: 0.75rem;
                 }
             }
+        }
+
+        .card:hover {
+            background-color: #8998CD;
         }
     }
 }
 
 .footer {
     background-color: $color-footer;
-    padding: 12px;
+    padding: 0.75rem;
 }
