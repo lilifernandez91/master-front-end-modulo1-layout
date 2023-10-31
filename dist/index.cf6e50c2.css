@@ -1,0 +1,49 @@
+body {
+  background-color: #141414;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+header .header-logo img {
+  width: 80px;
+}
+
+header .header-logo .platform-title {
+  display: none;
+}
+
+header .header-buttons {
+  color: #fafaf0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+main .section-title {
+  color: #fafaf0;
+  font-size: 24px;
+}
+
+main .section-title .top-text {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=index.cf6e50c2.css.map */

@@ -1,0 +1,42 @@
+@use 'base' as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $color-fondo;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    @include flexCenter(row, space-between, center);
+    padding: 20px;
+
+    .header-logo {
+        img {
+            width: 80px;
+        }
+
+        .platform-title {
+            display: none;
+        }
+    }
+
+    .header-buttons {
+        @include flexCenter(row, center, center);
+        gap: 8px;
+        color: $color-text;
+    }
+}
+
+main {
+    @include flexCenter(column, center, center);
+
+    .section-title {
+        color: $color-text;
+        font-size: 24px;
+
+        .top-text {
+            font-weight: 700;
+        }
+    }
+}

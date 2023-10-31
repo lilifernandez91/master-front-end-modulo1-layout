@@ -37,6 +37,10 @@ header .page-title {
   padding: .75rem;
 }
 
+.page-container {
+  min-height: calc(100vh - 128px);
+}
+
 @media (width >= 768px) {
   .page-container {
     display: flex;
@@ -44,15 +48,9 @@ header .page-title {
 }
 
 .page-container nav {
+  background-color: #0065c9;
   position: sticky;
   top: 0;
-}
-
-@media (width >= 768px) {
-  .page-container nav .menu-container {
-    background-color: #0065c9;
-    height: 100vh;
-  }
 }
 
 .page-container nav .menu-container .menu-title {
