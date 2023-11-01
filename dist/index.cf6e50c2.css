@@ -25,7 +25,7 @@ header .header-logo .platform-title {
   display: none;
 }
 
-@media (width >= 760px) {
+@media (width >= 960px) {
   header .header-logo .platform-title {
     color: #fafaf0;
     display: block;
@@ -69,7 +69,8 @@ main {
 
 main .section-title {
   color: #fafaf0;
-  padding: 16px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 main .section-title #top-text {
@@ -82,15 +83,15 @@ main .section-title #top-text {
   }
 }
 
-@media (width <= 760px) {
+@media (width <= 960px) {
   main .section-title #top-text:before {
     content: "3";
   }
 }
 
-@media (width >= 760px) {
+@media (width >= 960px) {
   main .section-title {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -108,7 +109,6 @@ main .top {
     justify-content: stretch;
     align-items: center;
     display: flex;
-    overflow: auto;
   }
 }
 
@@ -117,13 +117,13 @@ main .top .top-item {
   width: 100%;
 }
 
-@media (width <= 760px) {
+@media (width <= 960px) {
   main .top .top-item:nth-child(4), main .top .top-item:nth-child(5) {
     display: none;
   }
 }
 
-@media (width >= 760px) {
+@media (width >= 960px) {
   main .top .top-item {
     transition: transform .3s;
   }
@@ -134,7 +134,7 @@ main .top .top-item {
 }
 
 main .top .top-item img {
-  width: auto;
+  width: 100%;
 }
 
 main .first, main .second {
@@ -147,11 +147,15 @@ main .first, main .second {
 
 @media (width >= 540px) {
   main .first, main .second {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-    overflow: auto;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+  }
+}
+
+@media (width >= 960px) {
+  main .first, main .second {
+    grid-template-columns: repeat(6, 1fr);
+    display: grid;
   }
 }
 
@@ -160,7 +164,7 @@ main .first .item, main .second .item {
   width: 100%;
 }
 
-@media (width >= 760px) {
+@media (width >= 960px) {
   main .first .item, main .second .item {
     transition: transform .3s;
   }
@@ -171,7 +175,7 @@ main .first .item, main .second .item {
 }
 
 main .first .item img, main .second .item img {
-  width: auto;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.cf6e50c2.css.map */

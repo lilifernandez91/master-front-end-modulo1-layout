@@ -23,13 +23,13 @@ header {
         .platform-title {
             display: none;
 
-            @media (min-width: 760px) {
+            @media (min-width: 960px) {
                 display: block;
                 color: $color-text;
             }
         }
 
-        @media (min-width: 760px) {
+        @media (min-width: 960px) {
             @include flexCenter(row, center, center);
             gap: 12px;
         }
@@ -55,13 +55,14 @@ header {
 }
 
 main {
-    padding: 20px;
     height: 100%;
     overflow: auto;
+    padding: 20px;
 
     .section-title {
         color: $color-text;
-        padding: 16px 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
 
         #top-text {
             font-weight: 700;
@@ -72,15 +73,15 @@ main {
                 }
             }
 
-            @media (max-width: 760px) {
+            @media (max-width: 960px) {
                 &::before {
                     content: "3";
                 }
             }
         }
 
-        @media (min-width: 760px) {
-            font-size: 24px;
+        @media (min-width: 960px) {
+            font-size: 1.5rem;
         }
     }
 
@@ -90,14 +91,13 @@ main {
 
         @media (min-width: 540px) {
             @include flexCenter(row, stretch, center);
-            overflow: auto;
         }
 
         .top-item {
             cursor: pointer;
             width: 100%;
 
-            @media (max-width: 760px) {
+            @media (max-width: 960px) {
 
                 &:nth-child(4),
                 &:nth-child(5) {
@@ -105,18 +105,18 @@ main {
                 }
             }
 
-            @media (min-width: 760px) {
+            @media (min-width: 960px) {
                 transition: transform 0.3s;
             }
 
             &:hover {
-                @media (min-width: 760px) {
+                @media (min-width: 960px) {
                     transform: scale(1.1);
                 }
             }
 
             img {
-                width: auto;
+                width: 100%;
             }
         }
     }
@@ -126,26 +126,31 @@ main {
         gap: 12px;
 
         @media (min-width: 540px) {
-            @include flexCenter(row, flex-start, center);
-            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 960px) {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
         }
 
         .item {
             cursor: pointer;
             width: 100%;
 
-            @media (min-width: 760px) {
+            @media (min-width: 960px) {
                 transition: transform 0.3s;
             }
 
             &:hover {
-                @media (min-width: 760px) {
+                @media (min-width: 960px) {
                     transform: scale(1.1);
                 }
             }
 
             img {
-                width: auto;
+                width: 100%;
             }
         }
     }
