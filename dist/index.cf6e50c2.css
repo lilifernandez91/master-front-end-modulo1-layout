@@ -77,7 +77,7 @@ main .section-title #top-text {
   font-weight: 700;
 }
 
-@media (width >= 540px) {
+@media (width >= 961px) {
   main .section-title #top-text:before {
     content: "5";
   }

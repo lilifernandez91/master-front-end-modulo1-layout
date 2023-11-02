@@ -67,7 +67,7 @@ main {
         #top-text {
             font-weight: 700;
 
-            @media (min-width: 540px) {
+            @media (min-width: 961px) {
                 &::before {
                     content: "5";
                 }
