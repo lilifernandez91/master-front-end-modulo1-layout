@@ -38,7 +38,7 @@ header {
 }
 
 .page-container {
-    min-height: calc(100vh - 128px);
+    height: 100%;
 
     @media (min-width: 768px) {
         display: flex;
@@ -46,11 +46,17 @@ header {
 
     nav {
         background-color: $color-nav;
+        height: 57px;
         position: sticky;
         top: 0;
 
-        .menu-container {
+        @media (min-width: 768px) {
+            height: 100vh;
+        }
 
+        .menu-container {
+            position: sticky;
+            top: 0;
 
             .menu-title {
                 display: none;
