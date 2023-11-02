@@ -122,6 +122,7 @@ header {
             @include flexCenter(column, center, flex-start);
             gap: 0.5rem;
             margin: 1rem;
+            height: 90%;
 
             @media (min-width: 768px) {
                 flex-wrap: wrap;
@@ -143,10 +144,26 @@ header {
 
             @media (min-width: 768px) {
                 @include flexCenter(column, center, center);
-                height: 7rem;
-                width: 10rem;
+                height: 9rem;
+                width: 15rem;
                 padding: 16px;
                 border: 1px solid $color-black;
+            }
+
+            @media (min-width: 990px) {
+                width: 16rem;
+            }
+
+            @media (min-width: 1038px) {
+                height: 12rem;
+            }
+
+            @media (min-width: 1635px) {
+                width: 21rem;
+            }
+
+            @media (min-width: 2037px) {
+                width: 24rem;
             }
 
             img {
@@ -155,12 +172,17 @@ header {
 
                 @media (min-width: 768px) {
                     margin-left: 0;
+                    width: 112px;
+                }
+
+                @media (min-width: 1038px) {
+                    width: 136px;
                 }
             }
 
             .member-name {
                 @media (min-width: 768px) {
-                    font-size: 0.75rem;
+                    font-size: 20px;
                 }
             }
         }

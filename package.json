@@ -1,22 +1,5 @@
 {
-  "name": "master-front-end-modulo1-layout",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lilifernandez91/master-front-end-modulo1-layout.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lilifernandez91/master-front-end-modulo1-layout/issues"
-  },
-  "homepage": "https://github.com/lilifernandez91/master-front-end-modulo1-layout#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.10.1"
+    "@parcel/transformer-sass": "^2.10.2"
   }
 }

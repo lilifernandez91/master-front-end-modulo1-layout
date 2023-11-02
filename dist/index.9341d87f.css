@@ -136,6 +136,7 @@ header .page-title {
   justify-content: center;
   align-items: flex-start;
   gap: .5rem;
+  height: 90%;
   margin: 1rem;
   display: flex;
 }
@@ -168,10 +169,34 @@ header .page-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 7rem;
+    width: 15rem;
+    height: 9rem;
     padding: 16px;
     display: flex;
+  }
+}
+
+@media (width >= 990px) {
+  .page-container main .card {
+    width: 16rem;
+  }
+}
+
+@media (width >= 1038px) {
+  .page-container main .card {
+    height: 12rem;
+  }
+}
+
+@media (width >= 1635px) {
+  .page-container main .card {
+    width: 21rem;
+  }
+}
+
+@media (width >= 2037px) {
+  .page-container main .card {
+    width: 24rem;
   }
 }
 
@@ -182,11 +207,20 @@ header .page-title {
 
 @media (width >= 768px) {
   .page-container main .card img {
+    width: 112px;
     margin-left: 0;
   }
+}
 
+@media (width >= 1038px) {
+  .page-container main .card img {
+    width: 136px;
+  }
+}
+
+@media (width >= 768px) {
   .page-container main .card .member-name {
-    font-size: .75rem;
+    font-size: 20px;
   }
 }
 
